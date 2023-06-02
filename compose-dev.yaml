@@ -2,9 +2,7 @@ services:
   web:
     build:
       context: app
-      target: builder
     ports:
       - 4200:4200
     volumes:
-      - ./app:/project
-      - /project/node_modules
+      - .:/app
